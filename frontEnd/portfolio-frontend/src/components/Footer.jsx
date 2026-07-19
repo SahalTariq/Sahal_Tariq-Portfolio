@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-              Your Name
+              Sahal Tariq
             </h3>
             <p className="text-gray-400 text-sm mt-1">
               Full Stack Developer
@@ -19,7 +19,7 @@ const Footer = () => {
 
           <div className="flex gap-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/SahalTariq"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors text-xl hover:scale-110 transform duration-200"
@@ -28,7 +28,7 @@ const Footer = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/sahal-tariq-react/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors text-xl hover:scale-110 transform duration-200"
@@ -36,7 +36,7 @@ const Footer = () => {
             >
               <FaLinkedin />
             </a>
-            <a
+            {/* <a
               href="https://twitter.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
@@ -44,9 +44,9 @@ const Footer = () => {
               aria-label="Twitter"
             >
               <FaTwitter />
-            </a>
+            </a> */}
             <a
-              href="mailto:your@email.com"
+              href="mailto:sahaltariq45@gmail.com"
               className="text-gray-400 hover:text-white transition-colors text-xl hover:scale-110 transform duration-200"
               aria-label="Email"
             >
@@ -56,7 +56,7 @@ const Footer = () => {
 
           <div className="text-center md:text-right">
             <p className="text-gray-400 text-sm flex items-center justify-center md:justify-end gap-1">
-              Made with <FaHeart className="text-red-400 animate-pulse" /> by Your Name
+              Made with <FaHeart className="text-red-400 animate-pulse" /> Sahal Tariq WebDev
             </p>
             <p className="text-gray-500 text-xs mt-1">
               &copy; {currentYear} All rights reserved

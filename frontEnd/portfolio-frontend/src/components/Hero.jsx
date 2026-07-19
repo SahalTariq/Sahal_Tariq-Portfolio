@@ -102,6 +102,7 @@ const Hero = () => {
                 <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold shadow-2xl">
                   {/* Your initial or avatar */}
                   <span>👨‍💻</span>
+                  {/* <image src="/personal.jpeg" alt="Sahal Tariq"  /> */}
                 </div>
               </div>
 
