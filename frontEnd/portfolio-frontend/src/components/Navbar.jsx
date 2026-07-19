@@ -58,7 +58,7 @@ const Navbar = () => {
             onClick={() => scrollToSection('home')}
             className="text-xl md:text-2xl font-bold text-gray-800 hover:text-primary-600 transition-colors"
           >
-            RAULWEBDEV
+            SAHALTARIQWEBDEV
           </button>
 
           {/* Desktop Navigation */}

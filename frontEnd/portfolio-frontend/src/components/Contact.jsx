@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+// import config from '../config';
 import { FaUser, FaEnvelope, FaComment, FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 
 const Contact = () => {
@@ -10,6 +11,9 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: '', message: '' });
+
+  // Get API URL from environment variable or use default
+  const API_URL = import.meta.env?.REACT_APP_API_URL || 'http://localhost:5000/api';
 
   const handleChange = (e) => {
     setFormData({
@@ -25,9 +29,11 @@ const Contact = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/contact`,
+        `${API_URL}/contact`,
         formData
       );
+
+      console.log('Message sent successfully:', response.data);
 
       setStatus({
         type: 'success',
@@ -40,7 +46,6 @@ const Contact = () => {
       if (error.response && error.response.data) {
         const errorData = error.response.data;
         if (errorData.errors) {
-          // Validation errors
           const errorMessages = errorData.errors.map(err => err.message).join(', ');
           setStatus({
             type: 'error',
@@ -52,6 +57,11 @@ const Contact = () => {
             message: `❌ ${errorData.message || 'Failed to send message. Please try again.'}`
           });
         }
+      } else if (error.request) {
+        setStatus({
+          type: 'error',
+          message: '❌ Cannot connect to server. Please check if the backend is running.'
+        });
       } else {
         setStatus({
           type: 'error',
